@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "语音朗读",
+    "description": "给每条已完成的助手回复加一个播放按钮：点回复操作条上的 ▶，就用 DeepSeek 官方 TTS 把这条回复念出来；播放中点 ■ 停止。只读你点的那一条，音频留在内存里，同一条再点不重复计费。配置：把单行 API key 放进 ~/.dsh/voice/api-key.txt，或者用 apiKeyPath 指向别的文件，或者设环境变量 DEEPSEEK_API_KEY。音色是插件 cordis.patch.yml 里的 voiceId：tide 男声、stella 女声。语音按字符计费，单次点击最多 2000 字符。key 每次请求现读、不写日志，只放在 Authorization 头里发给 api.deepseek.com。停用这个插件会移除按钮，对话里其他东西不变。",
+    "detail": "docs/DETAIL.zh.md"
+  }
+}
