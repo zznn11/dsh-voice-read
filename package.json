@@ -1,0 +1,66 @@
+{
+  "name": "dsh-voice-read",
+  "version": "0.1.0",
+  "description": "Play button on finished DeepSeek Harness assistant replies that reads them aloud through the official DeepSeek TTS API",
+  "type": "module",
+  "license": "MIT",
+  "author": "Xia Chanjun",
+  "keywords": [
+    "dsh-plugin",
+    "tts",
+    "deepseek",
+    "speech",
+    "deepseek-harness",
+    "text-to-speech"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zznn11/dsh-voice-read"
+  },
+  "homepage": "https://github.com/zznn11/dsh-voice-read#readme",
+  "bugs": {
+    "url": "https://github.com/zznn11/dsh-voice-read/issues"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "README.md",
+    "README.en.md",
+    "CHANGELOG.md",
+    "LICENSE",
+    "icon.svg",
+    "docs",
+    "locale/*.json"
+  ],
+  "peerDependencies": {
+    "@deepseek-ai/schemastery": "^3.19.0"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/schemastery": {
+      "optional": true
+    }
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}
