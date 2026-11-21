@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Voice read",
+    "description": "Adds a play button to every finished assistant reply. Click ▶ in that reply's action strip to hear it read by the official DeepSeek text-to-speech API; click ■ to stop. Only the reply you click is spoken, and its audio stays in memory for the rest of the session so replaying it costs nothing. Setup: put a single-line DeepSeek API key in ~/.dsh/voice/api-key.txt, point apiKeyPath at a file of your own, or set the DEEPSEEK_API_KEY environment variable. The voice is voiceId in the plugin's cordis.patch.yml: tide (male) or stella (female). Speech is billed by DeepSeek per character, and one click is capped at 2000 characters. The key is read per request and never logged; it is sent to api.deepseek.com only in the Authorization header. Turning the plugin off removes the button and changes nothing else in the conversation.",
+    "detail": "docs/DETAIL.md"
+  }
+}
