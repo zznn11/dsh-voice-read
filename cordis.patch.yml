@@ -1,0 +1,14 @@
+# Loader patch for dsh-voice-read. This file carries the defaults a user may
+# edit in place for a local checkout; a durable per-install override goes into
+# the profile's own cordis.patch.yml with the same id, which replaces this
+# complete `config` mapping.
+- insert:
+    - id: dsh-voice-read
+      name: dsh-voice-read
+      config:
+        # tide = male voice, stella = female voice.
+        voiceId: tide
+        # Single-line plain text. `~`, `$HOME`, `${HOME}` expand to the user's
+        # home directory. A value that cannot be read falls back to the
+        # DEEPSEEK_API_KEY environment variable.
+        apiKeyPath: '~/.dsh/voice/api-key.txt'
