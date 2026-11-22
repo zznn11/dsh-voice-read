@@ -41,6 +41,8 @@
     "LICENSE",
     "icon.svg",
     "docs",
+    "assets",
+    "screenshots.json",
     "locale/*.json"
   ],
   "peerDependencies": {
